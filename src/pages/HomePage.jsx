@@ -3,10 +3,14 @@ import MovieCard from "../components/MovieCard"
 export default function HomePage() {
     return (
         <>
-            <HomePage />
-            <HomePage />
-            <HomePage />
-            <HomePage />
+
+            <div className="card-container">
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
+            </div>
+
         </>
     )
 }

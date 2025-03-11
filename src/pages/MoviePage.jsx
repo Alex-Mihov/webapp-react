@@ -1,7 +1,11 @@
-
+import ReviewCard from "../components/ReviewCard"
 
 export default function MoviePage() {
     return (
-        <div>MoviePage</div>
+        <>
+            <ReviewCard />
+            <ReviewCard />
+            <ReviewCard />
+        </>
     )
 }
