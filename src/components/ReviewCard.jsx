@@ -3,16 +3,17 @@
 export default function ReviewCard() {
     return (
         <>
+            {/* ReviewCard component */}
             <div className="review-container">
-                <span>
-                    Nome recensore
+                <span className="reviewer-name">
+                    Nome Recensore
                 </span>
 
-                <strong>
-                    Voto : voto recensione
+                <strong className="review-rating">
+                    Voto: voto recensione
                 </strong>
 
-                <p>
+                <p className="review-text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, quod at quis nihil perferendis facilis neque minus, itaque et odio id quam? Earum, veritatis esse quibusdam perspiciatis illo commodi ducimus?
                 </p>
             </div>
