@@ -95,3 +95,133 @@ header {
 .bottone-dettaglio a:hover {
     background-color: #0056b3;
 }
+
+/* Contenitore principale della pagina */
+.container-movie-page {
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 16px;
+    padding: 20px;
+    display: flex;
+    /* Flexbox per una disposizione flessibile */
+    flex-direction: column;
+    /* Disporre gli elementi in colonna */
+    align-items: center;
+    /* Centra orizzontalmente gli elementi */
+}
+
+/* Dettagli del film */
+.movie-page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* Allinea il testo al centro */
+}
+
+/* Titolo del film */
+.movie-title {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+/* Immagine del film */
+.movie-image {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+/* Nome dell'autore */
+.movie-author {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Descrizione del film */
+.movie-description {
+    font-size: 1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+/* Sezione delle recensioni */
+.reviews-section {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra le recensioni */
+}
+
+/* Contenitore della recensione */
+.review-container {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    /* Occupa il 80% dello spazio disponibile */
+    max-width: 1000px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Nome del recensore */
+.reviewer-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Voto della recensione */
+.review-rating {
+    font-size: 1rem;
+    color: #ffb400;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Testo della recensione */
+.review-text {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Link per tornare alla homepage */
+.back-home {
+    text-align: center;
+    margin-top: 40px;
+    width: 100%;
+}
+
+/* Stile del link */
+.back-home a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Hover sul link */
+.back-home a:hover {
+    color: #0056b3;
+}
