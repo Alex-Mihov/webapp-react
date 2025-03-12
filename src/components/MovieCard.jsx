@@ -31,7 +31,7 @@ export default function MovieCard({ movieProp }) {
                             </p>
                         </div>
                         <div className="mt-auto text-end p-2">
-                            <Link to="movies/1" className="btn btn-primary btn-sm text-white text-decoration-none">
+                            <Link to={`movies/${id}`} className="btn btn-primary btn-sm text-white text-decoration-none">
                                 Vedi altro
                             </Link>
                         </div>
