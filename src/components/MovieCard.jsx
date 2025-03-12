@@ -4,9 +4,9 @@ import { Link } from "react-router-dom"
 
 
 // Definizione del componente MovieCard come funzione
-export default function MovieCard({ movieProp }) {
+export default function MovieCard(props) {
 
-    const { id, title, director, abstract, image } = movieProp;
+    const { id, title, director, abstract, image } = props.movieProp;
 
     return (
         <>

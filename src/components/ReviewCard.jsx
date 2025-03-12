@@ -1,7 +1,7 @@
 // Definizione del componente ReviewCard come funzione
-export default function ReviewCard({ reviewProp }) {
+export default function ReviewCard(props) {
 
-    const { name, vote, text } = reviewProp
+    const { name, vote, text } = props.reviewProp
 
     return (
         <>
