@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 // Definizione del componente Header come funzione
 export default function Header() {
     return (
@@ -5,7 +7,10 @@ export default function Header() {
             {/* Elemento header */}
             <header>
                 {/* Titolo dell'applicazione */}
-                <h1>Movies</h1>
+                <Link to="/">
+                    <h1>Movies</h1>
+                </Link>
+
             </header>
         </>
     )

@@ -1,7 +1,20 @@
+import axios from "axios"
+
+import { useState, useEffect } from "react"
+
+import { Link, useNavigate, useParams } from "react-router-dom"
+
 import ReviewCard from "../components/ReviewCard"
-import { Link } from "react-router-dom"
+
 
 export default function MoviePage() {
+
+    const { id } = useParams();
+
+    const redirect = useNavigate();
+
+    const [movie, setMovie] = useState({});
+
     return (
         <>
             {/* Contenitore principale della pagina del film */}
