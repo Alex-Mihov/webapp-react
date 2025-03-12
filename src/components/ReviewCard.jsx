@@ -1,6 +1,7 @@
 // Definizione del componente ReviewCard come funzione
 export default function ReviewCard(props) {
 
+    // Estrazione delle proprietà name, vote e text da props.reviewProp
     const { name, vote, text } = props.reviewProp
 
     return (

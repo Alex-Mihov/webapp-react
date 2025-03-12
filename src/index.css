@@ -1,9 +1,11 @@
+/* Stile globale per tutti gli elementi */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Stile per l'elemento header */
 header {
     background-color: #c9c9c9;
     padding: 20px;
@@ -11,6 +13,7 @@ header {
     color: #333;
 }
 
+/* Stile per i link all'interno dell'header */
 header a {
     text-decoration: none;
     color: black;
@@ -24,20 +27,15 @@ header a {
     gap: 30px;
 }
 
-
-
-/* Contenitore principale della pagina */
+/* Contenitore principale della pagina del film */
 .container-movie-page {
     background-color: #f4f4f4;
     color: #333;
     font-size: 16px;
     padding: 20px;
     display: flex;
-    /* Flexbox per una disposizione flessibile */
     flex-direction: column;
-    /* Disporre gli elementi in colonna */
     align-items: center;
-    /* Centra orizzontalmente gli elementi */
 }
 
 /* Dettagli del film */
@@ -50,7 +48,6 @@ header a {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    /* Allinea il testo al centro */
 }
 
 /* Titolo del film */
@@ -97,7 +94,6 @@ header a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Centra le recensioni */
 }
 
 /* Contenitore della recensione */
@@ -107,7 +103,6 @@ header a {
     padding: 20px;
     margin-bottom: 20px;
     width: 80%;
-    /* Occupa il 80% dello spazio disponibile */
     max-width: 1000px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -154,4 +149,34 @@ header a {
 /* Hover sul link */
 .back-home a:hover {
     color: #0056b3;
+}
+
+/* Contenitore della pagina non trovata */
+.not-found-container {
+    background-image: url('../public/img/404-status-code.jpg');
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Stile del link per tornare alla homepage nella pagina non trovata */
+.back-home-notfound {
+    position: absolute;
+    bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Stile del link all'interno del contenitore back-home-notfound */
+.back-home-notfound a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
 }
