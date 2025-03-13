@@ -10,6 +10,9 @@ import { Link, useNavigate, useParams } from "react-router-dom"
 // Importazione del componente ReviewCard
 import ReviewCard from "../components/ReviewCard"
 
+// Importazione del componente ReviewForm
+import ReviewForm from "../components/ReviewForm"
+
 // Definizione del componente MoviePage come funzione
 export default function MoviePage() {
     // Estrazione del parametro id dalla URL
@@ -73,6 +76,11 @@ export default function MoviePage() {
                                 review => <ReviewCard key={review.id} reviewProp={review} />
                             )
                         }
+                    </div>
+
+                    {/* Form per aggiungere una nuova recensione */}
+                    <div>
+                        <ReviewForm movie_id={movie.id} reloadReviews={fetchMovie} />
                     </div>
 
                     {/* Link per tornare alla homepage */}
