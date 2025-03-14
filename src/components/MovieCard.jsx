@@ -9,8 +9,7 @@ export default function MovieCard(props) {
 
     return (
         <>
-            {/* Contenitore principale della card */}
-            <div className="card mb-3 d-flex flex-column" style={{ maxWidth: "540px", height: "300px" }}>
+            <div className="card mb-3 d-flex flex-column shadow-sm rounded bg-dark text-light" style={{ width: "540px", height: "300px" }}>
                 {/* Contenitore della riga della card */}
                 <div className="row g-0 h-100">
                     {/* Colonna per l'immagine */}
@@ -20,21 +19,27 @@ export default function MovieCard(props) {
                             src={image}
                             className="img-fluid rounded-start h-100 w-100"
                             alt={title}
-                            style={{ objectFit: "cover" }}
+                            style={{ objectFit: "cover", height: "100%", borderTopLeftRadius: "0.25rem", borderBottomLeftRadius: "0.25rem" }}
                         />
                     </div>
                     {/* Colonna per i dettagli del film */}
                     <div className="col-md-8 d-flex flex-column h-100">
                         {/* Corpo della card */}
-                        <div className="card-body flex-grow-1">
+                        <div className="card-body d-flex flex-column justify-content-between">
                             {/* Titolo del film */}
-                            <h5 className="card-title">{title}</h5>
+                            <h5 className="card-title mt-2 mb-2">{title}</h5> {/* 8px di margine sopra e sotto */}
                             {/* Nome del regista */}
-                            <p className="card-text"><small className="text-body-secondary">{director}</small></p>
+                            <p className="card-text text-white mt-2 mb-2"><small>{director}</small></p> {/* 8px di margine sopra e sotto */}
                             {/* Abstract del film */}
-                            <p className="card-text text-truncate" style={{ maxHeight: "100px", overflow: "hidden" }}>
+                            <p className="card-text mt-2 mb-2" style={{
+                                maxHeight: "100px",
+                                overflowY: "auto",
+                                textOverflow: "ellipsis",
+                                scrollbarWidth: "none", /* Per Firefox */
+                                msOverflowStyle: "none" /* Per Internet Explorer/Edge */
+                            }}>
                                 {abstract}
-                            </p>
+                            </p> {/* 8px di margine sopra e sotto */}
                         </div>
                         {/* Contenitore del link per vedere i dettagli */}
                         <div className="mt-auto text-end p-2">

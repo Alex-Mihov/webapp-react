@@ -5,6 +5,7 @@ import DefaultLayout from "./layouts/DefaultLayout"
 import HomePage from "./pages/HomePage";
 import MoviePage from "./pages/MoviePage";
 import NotFoundPage from "./pages/NotFoundPage";
+import CreateMoviePage from "./pages/CreateMoviePage";
 
 // Importazione dei componenti necessari per il routing da react-router-dom
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -23,6 +24,7 @@ function App() {
           <Route element={<DefaultLayout />}>
             {/* Rotta principale che renderizza HomePage */}
             <Route index path="/" element={<HomePage />} />
+            <Route path="/movies/create" element={<CreateMoviePage />} />
             {/* Rotta dinamica per i film che renderizza MoviePage */}
             <Route path="/movies/:id" element={<MoviePage />} />
             {/* Rotta per gestire le pagine non trovate che renderizza NotFoundPage */}

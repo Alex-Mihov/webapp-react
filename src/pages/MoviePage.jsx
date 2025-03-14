@@ -45,50 +45,63 @@ export default function MoviePage() {
 
     return (
         <>
-            {/* Contenitore principale della pagina del film */}
-            <div className="container-movie-page">
-                <div className="movie-page">
+            <div className="container mt-5">
+                <div className="row">
                     {/* Sezione dei dettagli del film */}
-                    <div className="movie-details">
-                        <h3 className="movie-title">{movie.title}</h3>
+                    <div className="col-lg-8">
+                        <div className="card bg-dark text-light mb-4">
+                            <div className="card-body">
+                                <h3 className="card-title text-white">{movie.title}</h3>
 
-                        {/* Immagine del film */}
-                        <img
-                            className="movie-image"
-                            src={movie.image}
-                            alt={movie.title}
-                        />
+                                {/* Immagine del film con altezza fissa */}
+                                <img
+                                    className="img-fluid rounded mb-3"
+                                    src={movie.image}
+                                    alt={movie.title}
+                                    style={{ height: '300px', objectFit: 'cover' }} // Altezza fissa
+                                />
 
-                        {/* Nome dell'autore del film */}
-                        <span className="movie-author">{movie.director}</span>
+                                {/* Nome dell'autore del film */}
+                                <h5 className="text-muted">Diretto da: {movie.director}</h5>
 
-                        {/* Descrizione del film */}
-                        <p className="movie-description">
-                            {movie.abstract}
-                        </p>
-                    </div>
-
-                    {/* Sezione delle recensioni */}
-                    <div className="reviews-section">
-                        {
-                            // Mappa le recensioni del film e renderizza una ReviewCard per ciascuna
-                            movie.reviews?.map(
-                                review => <ReviewCard key={review.id} reviewProp={review} />
-                            )
-                        }
-                    </div>
-
-                    {/* Form per aggiungere una nuova recensione */}
-                    <div>
-                        <ReviewForm movie_id={movie.id} reloadReviews={fetchMovie} />
-                    </div>
-
-                    {/* Link per tornare alla homepage */}
-                    <div className="back-home">
-                        <Link to="/">Torna sulla Homepage</Link>
+                                {/* Descrizione del film */}
+                                <p className="card-text">{movie.abstract}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                {/* Sezione delle recensioni sotto la parte del film */}
+                <div className="row">
+                    <div className="col-lg-8">
+                        <div className="card bg-dark text-light mb-4">
+                            <div className="card-header">
+                                <h5 className="text-white">Recensioni</h5>
+                            </div>
+                            <div className="card-body">
+                                {
+                                    movie.reviews?.map(review => (
+                                        <ReviewCard key={review.id} reviewProp={review} />
+                                    ))
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Form per aggiungere una nuova recensione */}
+                <div className="card bg-dark text-light mb-4">
+                    <div className="card-body">
+                        <ReviewForm movie_id={movie.id} reloadReviews={fetchMovie} />
+                    </div>
+                </div>
+
+                {/* Link per tornare alla homepage */}
+                <div className="text-center mt-4">
+                    <Link to="/" className="btn btn-outline-light">Torna sulla Homepage</Link>
+                </div>
             </div>
+
         </>
     )
 }
